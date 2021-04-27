@@ -50,37 +50,26 @@ section {
 section header {
   background-color: #A07655;
   width: 100%;
-  height: 3em;
+  height: auto;
   border-radius: 5px 5px 0 0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 section header h2 {
-  padding-top: 0.25em;
+  vertical-align: bottom;
   padding-left: 1em;
   font-family: poppins-medium;
   font-size: 40px;
-  line-height: 49px;
+  /*line-height: 49px;*/
 }
 
 section h3 {
   margin: 0;
+  vertical-align: bottom;
 }
 
 section div {
   padding: 1em 1em 1em 1em;
-}
-
-#validButton {
-  background-color: #FFFFFF;
-  color: #4F5256;
-  border-radius: 5px;
-  border: none;
-}
-
-#validButton:hover {
-  background-color: #C4C4C4;
-  color: #4F5256;
 }
 
 footer {
@@ -108,10 +97,6 @@ h1 {
   text-align: center;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-family: poppins-bold;
-  /*
-    font-weight: normal;
-    font-style: normal;
-    */
   font-size: 64px;
   line-height: 78px;
 }
@@ -153,10 +138,6 @@ nav a:active {
 .half header {
   background-color: #15DEA5;
   text-align: center;
-}
-
-.half div {
-  margin: 0.10;
 }
 
 .half-pic {
@@ -207,9 +188,14 @@ img {
   border-radius: 5px;
 }
 
+.tableau div {
+  padding: 0em;
+  width: fit-content;
+}
+
 .tableau div h4 {
   background-color: #C4C4C4;
-  padding: 0.25em 0.25em;
+  text-align: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)inset;
   margin: 0em;
 }
@@ -218,6 +204,7 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)inset;
   background-color: #FFFFFF;
   margin: 0em;
+  padding: 0.25em;
 }
 
 ul {
@@ -228,5 +215,25 @@ ul {
 .icone {
   width: auto;
   height: 1em;
+}
+
+input {
+  border: none;
+  border-radius: 5px;
+  font-family: poppins;
+}
+
+input[type=text] {
+  width: 100%;
+  height: 3em;
+}
+
+input[type=submit] {
+  width: 10em;
+  height: 2em;
+}
+
+input:hover {
+  background-color: #C4C4C4;
 }
 /*# sourceMappingURL=main.css.map */

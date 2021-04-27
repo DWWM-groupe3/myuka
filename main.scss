@@ -57,35 +57,26 @@ section {
     header {
         background-color: $brown;
         width: 100%;
-        height: 3em;
+        height: auto;
         border-radius: 5px 5px 0 0;
         box-shadow: $bottom_shadow;
         h2 {
-            padding-top: 0.25em;
+            vertical-align: bottom;
             padding-left: 1em;
             font-family: poppins-medium;
             font-size: 40px;
-            line-height: 49px;
+            /*line-height: 49px;*/
         }
     }
     h3 {
         margin: 0;
+        vertical-align: bottom;
     }
     div {
         padding: 1em 1em 1em 1em;
     }
-    
 }
-#validButton {
-    background-color: $white;
-    color: $grey;
-    border-radius: $radius;
-    border: none;
-    &:hover {
-        background-color: $background;
-        color: $grey;
-    }
-}
+
 
 footer {
     text-align: center;
@@ -112,10 +103,6 @@ h1 {
     text-align: center;
     text-shadow: $bottom_shadow;
     font-family: poppins-bold;
-    /*
-    font-weight: normal;
-    font-style: normal;
-    */
     font-size: 64px;
     line-height: 78px;
 }
@@ -153,9 +140,6 @@ nav {
     header {
         background-color: $mint;
         text-align: center;
-    }
-    div {
-        margin: 0.10;
     }
 }
 
@@ -208,9 +192,11 @@ img {
     background-color: $grey;
     border-radius: $radius;
     div {
+        padding: 0em;
+        width: fit-content;
         h4 {
             background-color: $background;
-            padding: 0.25em 0.25em;
+            text-align: center;
             box-shadow: $bottom_shadow+inset;
             margin: 0em;
         }
@@ -218,6 +204,7 @@ img {
             box-shadow: $bottom_shadow+inset;
             background-color: $white;
             margin: 0em;
+            padding: 0.25em;
         }
     }
 }
@@ -232,3 +219,19 @@ ul {
     height: 1em;
   }
 
+input {
+    border: none;
+    border-radius: $radius;
+    font-family: poppins;
+    &[type=text] {
+        width: 100%;
+        height: 3em;
+    }
+    &[type=submit] {
+        width: 10em;
+        height: 2em;
+    }
+    &:hover {
+        background-color: $background;
+    }
+}
