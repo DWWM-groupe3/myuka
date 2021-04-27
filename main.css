@@ -1,0 +1,209 @@
+.no_border {
+  border: none;
+}
+
+/*
+.shadow {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+*/
+@font-face {
+  font-family: league_gothic;
+  src: url(./font/League-Gothic/LeagueGothic-Regular.otf);
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  background-color: #C4C4C4;
+  font-family: league_gothic;
+  width: 100%;
+}
+
+section {
+  margin: 1em 1em 1em 1em;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 5px;
+  background-color: #4F5256;
+  color: #FFFFFF;
+}
+
+section header {
+  background-color: #A07655;
+  width: 100%;
+  height: 3em;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+section header h2 {
+  padding-top: 0.25em;
+  padding-left: 1em;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 49px;
+}
+
+section h3 {
+  margin: 0;
+}
+
+section div {
+  padding: 1em 1em 1em 1em;
+}
+
+#validButton {
+  background-color: #FFFFFF;
+  color: #4F5256;
+  border-radius: 5px;
+  border: none;
+}
+
+#validButton:hover {
+  background-color: #C4C4C4;
+  color: #4F5256;
+}
+
+footer {
+  text-align: center;
+  background-color: #A07655;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)inset;
+  color: #FFFFFF;
+  padding-top: 0.5em;
+  height: 2em;
+}
+
+.main_head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #15DEA5;
+  color: #FFFFFF;
+  height: 5em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+  flex: 2;
+  width: fit-content;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: normal;
+  font-style: normal;
+  font-size: 64px;
+  line-height: 78px;
+}
+
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+  height: 100%;
+  align-items: center;
+}
+
+nav a {
+  color: #FFFFFF;
+  padding: 1em 0.25em;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #FFFFFF;
+  color: #15DEA5;
+}
+
+nav a:active {
+  background-color: #4F5256;
+  color: #FFFFFF;
+}
+
+.half {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.half header {
+  background-color: #15DEA5;
+  text-align: center;
+}
+
+.half div {
+  margin: 0.10;
+}
+
+.half-pic {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 40%;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+}
+
+.half-txt {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 40%;
+  background-color: #FFFFFF;
+  color: #4F5256;
+  border-radius: 5px;
+  margin: 0.25em;
+  height: auto;
+}
+
+/*
+.half-txt-right {
+    background-color: $background;
+}
+*/
+img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.icone {
+  width: auto;
+  height: 1em;
+}
+
+.tableau {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /*align-content: flex-end;*/
+  width: auto;
+  height: auto;
+  background-color: #4F5256;
+  border-radius: 5px;
+}
+
+.tableau div h4 {
+  background-color: #C4C4C4;
+  padding: 0.25em 0.25em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)inset;
+  margin: 0em;
+}
+
+.tableau div ul {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)inset;
+  background-color: #FFFFFF;
+  margin: 0em;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0em;
+}
+
+.icone {
+  width: auto;
+  height: 1em;
+}
+/*# sourceMappingURL=main.css.map */
