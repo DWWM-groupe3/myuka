@@ -144,7 +144,8 @@ nav a:active {
   display: flex;
   flex-direction: column;
   flex: 1;
-  min-width: 40%;
+  min-width: 30%;
+  max-width: 30%;
   justify-content: space-around;
   align-items: center;
   height: auto;
@@ -180,7 +181,7 @@ img {
 .tableau {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   /*align-content: flex-end;*/
   width: auto;
   height: auto;
@@ -198,6 +199,7 @@ img {
   text-align: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)inset;
   margin: 0em;
+  padding: 0.25em;
 }
 
 .tableau div ul {
@@ -235,5 +237,13 @@ input[type=submit] {
 
 input:hover {
   background-color: #C4C4C4;
+}
+
+.nutrition {
+  min-width: 50%;
+}
+
+.produit {
+  height: fit-content;
 }
 /*# sourceMappingURL=main.css.map */
