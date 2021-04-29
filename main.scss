@@ -13,15 +13,12 @@ $radius: 5px;
     border: none;
 }
 /*
-.shadow {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
-*/
 @font-face {
     font-family: league_gothic;
     src: url(./font/League-Gothic/LeagueGothic-Regular.otf);
     font-weight: 400;
   }
+*/
 
   @font-face {
     font-family: poppins;
@@ -44,7 +41,6 @@ body {
     margin: 0;
     background-color: $background;
     font-family: poppins;
-    /*letter-spacing: 0.6px;*/
     width: 100%;
 }
 
@@ -110,7 +106,7 @@ h1 {
 nav {
     flex: 1;
     display: flex;
-    justify-content: space-around;
+    /*justify-content: center;*/
     overflow: hidden;
     height: 100%;
     align-items: center;
@@ -187,7 +183,6 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /*align-content: flex-end;*/
     width: auto;
     height: auto;
     background-color: $grey;

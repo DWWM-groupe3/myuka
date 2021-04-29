@@ -3,45 +3,39 @@
     <head>
         <title>My Yuka</title>
         <!--<link rel="stylesheet" href="style.css">-->
+        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
+        <!--HEADER-->
         <header class="main_head">
             <h1>MYUKA</h1>
-            
             <nav>
                     
-                    <a href="#produit">
-                        Produit
-                    <!--<img src="./img/icone/home.png" class="icone nav__icone">-->
-                    </a>
+                <a href="#produit">Produit</a>
                 <a href="#santé">Santé</a>
                 <a href="#environnement">Environnement</a>
             </nav>
         
         </header>
+        <!--SCAN DE PRODUIT-->
         <section id="scan">
             <header class="section_heading">
                 <h2>Scan</h2>
             </header>
             <form method="post" action="traitement.php">
                 <fieldset class="no_border shadow">
-                    <!--<legend>Scan de produits</legend>-->
-
                     <div class="info_form">
-                        
-                    <!--<label for="searchbar">Chercher un produit, une marque :</label>-->
-                      
-                    <input type="text" name="searchbar" id="searchbar" placeholder="Chercher un produit, une marque, un code-barres :">
-                    <hr>
+                        <input type="text" name="searchbar" id="searchbar" placeholder="Chercher un produit, une marque, un code-barres :">
+                        <hr>
                     </div>
 
                     <div><input type="submit" value="Envoyer" id="validButton"/></div>
                 </fieldset>
-                
             </form>
         </section>
+        <!--INFO PRODUIT-->
         <section id="produit">
             <header class="section_heading">
                 <h2>Informations produit</h2>
@@ -64,11 +58,13 @@
             </div>
             
         </section>
+        <!--INFO SANTÉ-->
         <section id="santé">
             <header><h2><img src="./img/icone/heart.png" class="icone"> Santé</h2></header>
             <div class="half">
                 <div class="half-txt nutrition">
                     <header><h3>Valeurs nutritives</h3></header>
+                    <!--Tableau valeurs nutritives-->
                     <div class="tableau">
                         <div>
                             <h4>Composition</h4>
@@ -119,6 +115,7 @@
             </div>
             
         </section>
+        <!--INFO ENVIRONNEMENT-->
         <section id="environnement">
             <header><h2><img src="./img/icone/leaf.png" class="icone"> Environnement</h2></header>
             <div class="half">
@@ -137,7 +134,7 @@
                         </div>
                         <div>
                             <img src="./img/icone/fair-trade.png" class="icone">
-                            Fairtrade <br>
+                            Fairtrade :<br>
                             Limite l'utilisation de pesticides
                         </div>
                     </div>
@@ -157,6 +154,7 @@
 
             </div>
         </section>
+        <!--FOOTER-->
         <footer>
             All rights reserved - France - Plan du site
         </footer>
