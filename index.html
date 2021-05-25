@@ -1,162 +1,263 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>My Yuka</title>
-        <!--<link rel="stylesheet" href="style.css">-->
+
+        
+
+        <meta charset="utf-8">
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="main.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+         
+
+        <link rel="stylesheet" href="style.css">
+        <!-- Google fonts -->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+        </style>
+
+        <!-- Font awesome -->
+        <script src="https://kit.fontawesome.com/eaf337826d.js" crossorigin="anonymous"></script>
     </head>
-    <body>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
         <!--HEADER-->
-        <header class="main_head">
-            <h1>MYUKA</h1>
-            <nav>
-                    
-                <a href="#produit">Produit</a>
-                <a href="#santé">Santé</a>
-                <a href="#environnement">Environnement</a>
-            </nav>
-        
-        </header>
+        <!--
+        <div class="bg-dark">
+            <div class="container">
+                <div class="row">
+        -->
+                    <nav class="navbar navbar-expand-lg mint-bg navbar-dark fixed-top">
+                        <a class="navbar-brand" href="index_copy.html">
+                            <img src="./img/logo.png" width=auto height="50" alt="logo" padding=none class="logo">
+                            MYUKA
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarContent">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <!--Nav Items-->
+                        <div id="navbarContent" class="collapse navbar-collapse">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active">
+                                   <a class="nav-link" href="index_copy.html">Accueil</a>
+                                </li>
+                                <li class="nav-item">
+                                   <a class="nav-link" href="#produit">Produit</a>
+                                </li>
+                                <li class="nav-item">
+                                 <a class="nav-link" href="#santé">Santé</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="#environnement">Environnement</a>
+                              </li>
+                             </ul>
+                         </div>
+                    </nav>
+    <!--
+                </div>
+            </div>
+        </div>
+        -->
         <!--SCAN DE PRODUIT-->
-        <section id="scan">
-            <header class="section_heading">
-                <h2>Scan</h2>
-            </header>
-            <form method="post" action="traitement.php">
-                <fieldset class="no_border shadow">
-                    <div class="info_form">
-                        <input type="text" name="searchbar" id="searchbar" placeholder="Chercher un produit, une marque, un code-barres :">
-                        <hr>
+        <div class="container-fluid grey-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="jumbotron white-bg">
+                            <h1>Scan de produit</h1>
+                            <hr class="mb-5"/>
+                            <form method="post" action="traitement.php" class="brown-bg">
+                                <fieldset class="no_border shadow">
+                                    <div class="info_form">
+                                        <input type="text" name="searchbar" id="searchbar" placeholder="Chercher un produit, une marque, un code-barres :">
+                                        
+                                        <div><input type="submit" value="Envoyer" id="validButton"/></div>
+                                    </div>
+                
+                                    
+                                </fieldset>
+                            </form>
+                        </div>
                     </div>
-
-                    <div><input type="submit" value="Envoyer" id="validButton"/></div>
-                </fieldset>
-            </form>
-        </section>
-        <!--INFO PRODUIT-->
-        <section id="produit">
-            <header class="section_heading">
-                <h2>Informations produit</h2>
-            </header>
-            <div class="half">
-                <div class="half-pic">
-                    <img src="./img/starbucks.jpeg">
-                </div>
-                <div class="produit half-txt">
-                    <h3>Starbucks Capuccino</h3>
-                    <h4>Starbucks</h4>
-                    Code-barres : 5711953007828
-                    <br>
-                    <p style="text-align: left;">
-                        
-                        <p style="background-color: red; height: 0.5em; width: 0.5em; border-radius: 50%;"></p>9/100
-                        <p><img src="./img/nutriscore.png" class="icone"> Nutriscore</p>
-                    </p>
                 </div>
             </div>
-            
-        </section>
-        <!--INFO SANTÉ-->
-        <section id="santé">
-            <header><h2><img src="./img/icone/heart.png" class="icone"> Santé</h2></header>
-            <div class="half">
-                <div class="half-txt nutrition">
-                    <header><h3>Valeurs nutritives</h3></header>
-                    <!--Tableau valeurs nutritives-->
-                    <div class="tableau">
-                        <div>
-                            <h4>Composition</h4>
-                            <ul>
-                                <li>Calories</li>
-                                <li>Sucre</li>
-                                <li>Additifs</li>
-                                <li>Sel</li>
-                                <li>Graisses&nbspsaturées</li>
-                                <li>Protéines</li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <h4>Quantité</h4>
-                            <ul>
-                                <li>69&nbspkcal</li>
-                                <li>8.5&nbspg</li>
-                                <li>4</li>
-                                <li>0.08&nbspg</li>
-                                <li>1.6&nbspg</li>
-                                <li>2.7&nbspg</li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <h4>%</h4>
-                            <ul>
-                                <li>3&nbsp%</li>
-                                <li>9&nbsp%</li>
-                                <li>&nbsp</li>
-                                <li>1&nbsp%</li>
-                                <li>8&nbsp%</li>
-                                <li>5&nbsp%</li>
-                            </ul>
-                        </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-12" id="produit">
+                    <h2>Informations Produit</h2>
+                    <hr class="mb-5"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="card product-card">
+                        <img class="card-img-top" src="./img/starbucks.jpeg">
+                    <div class="card-body">
+                        <h5 class="card-title">Starbucks Cappuccino</h5>
+                        <a href="#" class="btn purple-bg text-white">Voir Détails</a>
+                    </div>
                     </div>
                     
                 </div>
-
-                <div class="half-txt half-txt-right">
-                    <header><h3>Ingrédients</h3></header>
-                    <p>
-                        Lait (contient 3,0% de matières grasses) 75%, café arabica Starbucks® (eau, extrait de café) 19.8%, sucre, cacao maigre en poudre 0.1%, correcteur d'acidité (carbonates de potassium), stabilisants (carraghénanes, gomme guar), émulsifiants (mono - et diglycérides d'acides gras d'origine végétale), arôme naturel, arôme.
-                    </p>
+                <div class="col-12 col-lg-6 shadow">
+                    <div class="card product-card">
+                        <h3 class="card-title">Starbucks Capuccino</h3>
+                    <h4>Starbucks</h4>
+                    <div class="card-body">
+                        Code-barres : 5711953007828
+                        
+                            
+                        <p style="background-color: red; height: 0.5em; width: 0.5em; border-radius: 50%;"></p>9/100
+                        <p><img src="./img/nutriscore.png" class="icone" style="width: 2em;"> Nutriscore</p>
+                        
+                    </div>
+                    
+                    </div>
+                    
                 </div>
-
             </div>
-            
-        </section>
-        <!--INFO ENVIRONNEMENT-->
-        <section id="environnement">
-            <header><h2><img src="./img/icone/leaf.png" class="icone"> Environnement</h2></header>
-            <div class="half">
-                <div class="half-txt">
-                    <header><h3>Qualités</h3></header>
-                    <div>
-                        <div>
-                            <img src="./img/icone/care.png" class="icone">
-                            Production :<br>
+        </div>
+        <div class="container-fluid grey-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12" id="santé">
+                        <h2>Santé</h2>
+                        <hr class="mb-5"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-6 shadow light-grey-bg">
+                        <h3>Valeurs Nutritives</h3>
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Composition</th>
+                                    <th>Quantité</th>
+                                    <th>%</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Calories</td>
+                                    <td>69&nbspkcal</td>
+                                    <td>3&nbsp%</td>
+                                </tr>
+                                <tr>
+                                    <td>Sucre</td>
+                                    <td>8.5&nbspg</td>
+                                    <td>9&nbsp%</td>
+                                </tr>
+                                <tr>
+                                    <td>Additifs</td>
+                                    <td>4</td>
+                                    <td>&nbsp</td>
+                                </tr>
+                                <tr>
+                                    <td>Sel</td>
+                                    <td>0.08&nbspg</td>
+                                    <td>1&nbsp%</td>
+                                </tr>
+                                <tr>
+                                    <td>Graisses&nbspsaturées</td>
+                                    <td>1.6&nbspg</td>
+                                    <td>8&nbsp%</td>
+                                </tr>
+                                <tr>
+                                    <td>Protéines</td>
+                                    <td>2.7&nbspg</td>
+                                    <td>5&nbsp%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-12 col-lg-6 shadow light-grey-bg">
+                        <h3>Ingrédients</h3>
+                        <p>
+                            Lait (contient 3,0% de matières grasses) 75%, café arabica Starbucks® (eau, extrait de café) 19.8%, sucre, cacao maigre en poudre 0.1%, correcteur d'acidité (carbonates de potassium), stabilisants (carraghénanes, gomme guar), émulsifiants (mono - et diglycérides d'acides gras d'origine végétale), arôme naturel, arôme.
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-12" id="environnement">
+                    <h2>Environnement</h2>
+                    <hr class="mb-5"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-4">
+                    <div class="card env-card">
+                        <img src="./img/icone/care.png">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Production :</h5>
                             Faible impact
                         </div>
-                        <div>
-                            <img src="./img/icone/palm-oil-free.png" class="icone">
-                            Huile de palme :<br>
+                            
+                    </div>
+                    
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card env-card">
+                        <img src="./img/icone/palm-oil-free.png">
+                        <div class="card-body text-center">
+                            <h5>Huile de palme :</h5>
                             Sauvegarde la forêt tropicale
                         </div>
-                        <div>
-                            <img src="./img/icone/fair-trade.png" class="icone">
-                            Fairtrade :<br>
+                    </div>
+                    
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card env-card">
+                        <div><img src="./img/icone/fair-trade.png"></div>
+                        <div class="card-body text-center">
+                            <h5>Fairtrade :</h5>
                             Limite l'utilisation de pesticides
                         </div>
                     </div>
+                    
                 </div>
-
-                <div class="half-txt">
-                <header><h3>Défauts</h3></header>  
-                    <div>
-                        <img src="./img/icone/location.png" class="icone">
-                        Origine: non communiquée
-                    </div>
-                    <div>
-                        <img src="./img/icone/box.png" class="icone">
-                        Emballage: non communiquée
-                    </div>
-                </div>
-
             </div>
-        </section>
-        <!--FOOTER-->
-        <footer>
-            All rights reserved - France - Plan du site
-        </footer>
+            <div class="row">
+                <div class="col-12 col-lg-6 shadow">
+                    <img src="./img/icone/location.png" class="icone">
+                        Origine: non communiquée
+                </div>
+                <div class="col-12 col-lg-6 shadow">
+                    <img src="./img/icone/box.png" class="icone">
+                        Emballage: non communiquée
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid bg-dark">
+            <div class="row">
+                <div class="col">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item"><a href="#">All rights reserved</a></li>
+                        <li class="list-inline-item">&middot;</li>
+                        <li class="list-inline-item"><a href="#">France</a></li>
+                        <li class="list-inline-item">&middot;</li>
+                        <li class="list-inline-item"><a href="#">Plan du site</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+               <!-- jQuery library -->
+               <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+               <!-- Popper JS -->
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+       
+               <!-- Latest compiled JavaScript -->
+               <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </body>
 </html>

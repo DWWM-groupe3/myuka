@@ -1,0 +1,245 @@
+$background : #C4C4C4;
+$mint: #15DEA5;
+$white: #FFFFFF;
+$grey: #4F5256;
+$brown: #A07655;
+
+$shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+$bottom_shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+$radius: 5px;
+
+.no_border {
+    border: none;
+}
+/*
+@font-face {
+    font-family: league_gothic;
+    src: url(./font/League-Gothic/LeagueGothic-Regular.otf);
+    font-weight: 400;
+  }
+*/
+
+  @font-face {
+    font-family: poppins;
+    src: url(./font/poppins/Poppins-Light.otf);
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: poppins-bold;
+    src: url(./font/poppins/Poppins-Bold.otf);
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: poppins-medium;
+    src: url(./font/poppins/Poppins-Medium.otf);
+    font-weight: 400;
+  }
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    background-color: $background;
+    font-family: poppins;
+    width: 100%;
+}
+
+section {
+    margin: 1em 1em 1em 1em;
+    box-shadow: $shadow;
+    border-radius: 5px;
+    background-color: $grey;
+    color: $white;
+    header {
+        background-color: $brown;
+        width: 100%;
+        height: auto;
+        border-radius: 5px 5px 0 0;
+        box-shadow: $bottom_shadow;
+        h2 {
+            vertical-align: bottom;
+            padding-left: 1em;
+            font-family: poppins-medium;
+            font-size: 40px;
+            /*line-height: 49px;*/
+        }
+    }
+    h3 {
+        margin: 0;
+        vertical-align: bottom;
+    }
+    div {
+        padding: 1em 1em 1em 1em;
+    }
+}
+
+
+footer {
+    text-align: center;
+    background-color: $brown;
+    box-shadow: $bottom_shadow+inset;
+    color: $white;
+    padding-top: 0.5em;
+    height: 2em;
+}
+
+.main_head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: $mint;
+    color: $white;
+    height: 5em;
+    box-shadow: $bottom_shadow;
+}
+
+h1 {
+    flex: 1;
+    width: fit-content;
+    text-align: center;
+    text-shadow: $bottom_shadow;
+    font-family: poppins-bold;
+    font-size: 64px;
+    line-height: 78px;
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    /*justify-content: center;*/
+    overflow: hidden;
+    height: 100%;
+    align-items: center;
+    a {
+        color: $white;
+        padding: 1em 0.25em;
+        text-decoration: none;
+        font-family: poppins-medium;
+        font-size: 20px;
+        &:hover {
+            background-color: $white;
+            color: $mint;
+        }
+        &:active {
+            background-color: $grey;
+            color: $white;
+        }
+    }
+}
+
+.half {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    header {
+        background-color: $mint;
+        text-align: center;
+    }
+}
+
+.half-pic {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 30%;
+    max-width: 30%;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+}
+
+.half-txt {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 40%;
+    background-color: $white;
+    color: $grey;
+    border-radius: $radius;
+    margin: 0.25em;
+    height: auto;
+    
+}
+
+/*
+.half-txt-right {
+    background-color: $background;
+}
+*/
+
+img {
+    width: 100%;
+    border-radius: $radius;
+}
+
+.icone {
+    width: auto;
+    height: 1em;
+}
+
+.tableau {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    background-color: $grey;
+    border-radius: $radius;
+    div {
+        padding: 0em;
+        width: fit-content;
+        h4 {
+            background-color: $background;
+            text-align: center;
+            box-shadow: $bottom_shadow+inset;
+            margin: 0em;
+            padding: 0.5em;
+        }
+        ul {
+            box-shadow: $bottom_shadow+inset;
+            background-color: $white;
+            margin: 0em;
+            padding: 0.25em;
+        }
+    }
+}
+
+ul {
+    list-style-type: none;
+    margin: 0em;
+}
+
+.icone {
+    width: auto;
+    height: 1em;
+  }
+
+input {
+    border: none;
+    border-radius: $radius;
+    font-family: poppins;
+    &[type=text] {
+        width: 100%;
+        height: 3em;
+    }
+    &[type=submit] {
+        width: 10em;
+        height: 2em;
+    }
+    &:hover {
+        background-color: $background;
+    }
+}
+
+.nutrition {
+    min-width: 50%;
+}
+
+.produit {
+    height: fit-content;
+}
