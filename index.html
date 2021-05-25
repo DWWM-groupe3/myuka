@@ -28,7 +28,7 @@
             <div class="container">
                 <div class="row">
         -->
-                    <nav class="navbar navbar-expand-lg mint-bg navbar-dark fixed-top">
+                    <nav class="navbar navbar-expand-lg purple-bg navbar-dark fixed-top">
                         <a class="navbar-brand" href="index.html">
                             <img src="./img/logo.png" width=auto height="50" alt="logo" padding=none class="logo">
                             MYUKA
@@ -67,12 +67,12 @@
                         <div class="jumbotron white-bg">
                             <h1>Scan de produit</h1>
                             <hr class="mb-5"/>
-                            <form method="post" action="traitement.php" class="brown-bg">
+                            <form method="post" action="traitement.php" class="purple-bg">
                                 <fieldset class="no_border shadow">
                                     <div class="info_form">
                                         <input type="text" name="searchbar" id="searchbar" placeholder="Chercher un produit, une marque, un code-barres :">
                                         
-                                        <div><input type="submit" value="Envoyer" id="validButton"/></div>
+                                        <div><input  class="btn btn-outline-light" type="submit" value="Envoyer" id="validButton"/></div>
                                     </div>
                 
                                     
@@ -86,7 +86,7 @@
         
         <div class="container">
             <div class="row">
-                <div class="col-12" id="produit">
+                <div class="col-12 subtitle" id="produit">
                     <h2>Informations Produit</h2>
                     <hr class="mb-5"/>
                 </div>
@@ -102,16 +102,17 @@
                     </div>
                     
                 </div>
-                <div class="col-12 col-lg-6 shadow">
+                <div class="col-12 col-lg-6">
                     <div class="card product-card">
-                        <h3 class="card-title">Starbucks Capuccino</h3>
-                    <h4>Starbucks</h4>
+                        <h3 class="card-title text-white">Starbucks Capuccino</h3>
+                    <h4 class="text-light">Starbucks</h4>
                     <div class="card-body">
                         Code-barres : 5711953007828
                         
                             
                         <p style="background-color: red; height: 0.5em; width: 0.5em; border-radius: 50%;"></p>9/100
                         <p><img src="./img/nutriscore.png" class="icone" style="width: 2em;"> Nutriscore</p>
+                        
                         
                     </div>
                     
@@ -123,14 +124,15 @@
         <div class="container-fluid grey-bg">
             <div class="container">
                 <div class="row">
-                    <div class="col-12" id="santé">
+                    <div class="col-12 subtitle" id="santé">
                         <h2>Santé</h2>
                         <hr class="mb-5"/>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12 col-lg-6 shadow light-grey-bg">
-                        <h3>Valeurs Nutritives</h3>
+                    <div class="col-12 col-lg-6 light-grey-bg">
+                        <div class="card">
+                            <h3>Valeurs Nutritives</h3>
                         <table class="table">
                             <thead class="thead-dark">
                                 <tr>
@@ -172,13 +174,19 @@
                                 </tr>
                             </tbody>
                         </table>
+                        </div>
+                        
                     </div>
                     <div class="col-12 col-lg-6 shadow light-grey-bg">
-                        <h3>Ingrédients</h3>
+                        <div class="card">
+                            <h3>Ingrédients</h3>
                         <p>
                             Lait (contient 3,0% de matières grasses) 75%, café arabica Starbucks® (eau, extrait de café) 19.8%, sucre, cacao maigre en poudre 0.1%, correcteur d'acidité (carbonates de potassium), stabilisants (carraghénanes, gomme guar), émulsifiants (mono - et diglycérides d'acides gras d'origine végétale), arôme naturel, arôme.
                             
                         </p>
+                        <a href="#" class="btn purple-bg text-white">Voir Détails</a>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -196,7 +204,7 @@
                     <div class="card env-card">
                         <img src="./img/icone/care.png">
                         <div class="card-body text-center">
-                            <h5 class="card-title">Production :</h5>
+                            <h5>Production :</h5>
                             Faible impact
                         </div>
                             
@@ -225,13 +233,21 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-lg-6 shadow">
-                    <img src="./img/icone/location.png" class="icone">
-                        Origine: non communiquée
+                <div class="col-12 col-lg-6">
+                    <div class="card env-card small-card">
+                        <img src="./img/icone/location.png">
+                        <h5>Origine :</h5>
+                        non communiquée
+                    </div>
+                    
                 </div>
-                <div class="col-12 col-lg-6 shadow">
-                    <img src="./img/icone/box.png" class="icone">
-                        Emballage: non communiquée
+                <div class="col-12 col-lg-6">
+                    <div class="card env-card small-card">
+                        <img src="./img/icone/box.png">
+                        <h5>Emballage :</h5>
+                        non communiquée
+                    </div>
+                    
                 </div>
             </div>
         </div>

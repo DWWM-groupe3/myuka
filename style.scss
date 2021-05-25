@@ -44,6 +44,21 @@ h2,h3 {
     margin: 1em 0 1em 0;
 }
 
+hr {
+    width: 25%;
+    height: 5px;
+    text-align: left;
+    background-color: $purple;
+    border: none;
+    margin: 0px;
+}
+
+.subtitle {
+    display: flex;
+    flex-direction: column;
+    //justify-content: left;
+    align-items: left;
+}
 .icone {
     width: auto;
     height: 1em;
@@ -53,13 +68,21 @@ h2,h3 {
     border-radius: $radius;
 }
 
+form {
+    border-radius: $radius;
+    border: none;
+    
+}
 .info_form {
     text-align: center;
     padding: 1em;
     #searchbar {
-        width: 30em;
+        width: 100%;
         padding: 0.5em;
         margin-bottom: 1em;
+        &:hover {
+            background-color: $background;
+        }
     }
 
 }
@@ -69,6 +92,9 @@ h2,h3 {
     flex-direction: column;
     align-content: center;
     padding: 1em 1em 0 1em;
+    background-color: $grey;
+    margin-bottom: 0.5em;
+    box-shadow: $shadow;
     img {
         width: 15em;
     }
@@ -79,8 +105,17 @@ h2,h3 {
 
 .env-card {
     height: 18em;
+    margin: 0.5em;
     img {
-        width: 10em;
+        width: 8em;
+    }
+    
+}
+.small-card {
+    height: 10em;
+    color: $white;
+    img {
+        width: 2em;
     }
 }
 
