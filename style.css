@@ -1,5 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pattaya&family=Roboto&display=swap");
+.grey-font {
+  color: #4F5256;
+}
+
+.white-font {
+  color: #FFFFFF;
+}
+
 .purple-bg {
-  background-color: #7952B3;
+  background-color: #6C5381;
 }
 
 .mint-bg {
@@ -18,10 +28,6 @@
   background-color: #4F5256;
 }
 
-.grey-bg h2 {
-  color: #FFFFFF;
-}
-
 .light-grey-bg {
   background-color: #C4C4C4;
 }
@@ -32,17 +38,36 @@ body {
   width: 100%;
 }
 
+.jumbotron {
+  border-radius: 0 0 5px 5px;
+  padding-top: 0;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
 h2, h3 {
   margin: 1em 0 1em 0;
+  font-family: 'Pattaya', sans-serif;
 }
 
 hr {
   width: 25%;
   height: 5px;
   text-align: left;
-  background-color: #7952B3;
+  background-color: #6C5381;
   border: none;
   margin: 0px;
+}
+
+section {
+  margin: 0 0 2em 0;
+  background-color: #FFFFFF;
+  border-radius: 0 0 10px 10px;
 }
 
 .subtitle {
@@ -58,6 +83,7 @@ hr {
 
 .logo {
   border-radius: 5px;
+  margin-right: 0.5em;
 }
 
 form {
@@ -80,31 +106,40 @@ form {
   background-color: #C4C4C4;
 }
 
+#product-img {
+  height: 30%;
+}
+
 .product-card, .env-card {
+  text-align: center;
+  padding: 0.5em;
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-content: center;
-  padding: 1em 1em 0 1em;
-  background-color: #4F5256;
+  border-radius: 10px;
+  background-color: #C4C4C4;
   margin-bottom: 0.5em;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-.product-card img, .env-card img {
-  width: 15em;
-}
-
-.product-card .card-body, .env-card .card-body {
-  background-color: #C4C4C4;
+.product-card .card-title, .env-card .card-title {
+  border-radius: 10px 10px 50% 0;
+  background-color: #4F5256;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  color: #FFFFFF;
+  padding: 0.5em;
 }
 
 .env-card {
-  height: 18em;
   margin: 0.5em;
+  width: auto;
 }
 
 .env-card img {
-  width: 8em;
+  width: 4em;
+  padding: 0.5em;
 }
 
 .small-card {
@@ -114,6 +149,35 @@ form {
 
 .small-card img {
   width: 2em;
+}
+
+.nutri-card {
+  width: 5em;
+  height: 7em;
+  border-radius: 10px 0 10px 0;
+}
+
+.nutri-card img {
+  height: 2em;
+  width: auto;
+}
+
+.nutri-card .card-title {
+  text-align: center;
+  color: #FFFFFF;
+  height: 6em;
+  width: 100%;
+  border-radius: 10px 0 50% 0;
+  background-color: #4F5256;
+  font-size: 0.5em;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.nutri-section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 /* =================== START PAGE ================== */
@@ -144,7 +208,7 @@ form {
 }
 
 .start .btn-start {
-  background-color: #7952B3;
+  background-color: #6C5381;
   border: none;
 }
 

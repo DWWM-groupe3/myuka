@@ -8,15 +8,12 @@
         <meta charset="utf-8">
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Latest compiled and minified CSS -->
+
+        <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
          
-
+        <!-- CSS -->
         <link rel="stylesheet" href="style.css">
-        <!-- Google fonts -->
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
-        </style>
 
         <!-- Font awesome -->
         <script src="https://kit.fontawesome.com/eaf337826d.js" crossorigin="anonymous"></script>
@@ -30,8 +27,8 @@
         -->
                     <nav class="navbar navbar-expand-lg purple-bg navbar-dark fixed-top">
                         <a class="navbar-brand" href="index.html">
-                            <img src="./img/logo.png" width=auto height="50" alt="logo" padding=none class="logo">
-                            MYUKA
+                            
+                            <h1><img src="./img/logo.png" width=auto height="50" alt="logo" class="logo">Myuka</h1>
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarContent">
                             <span class="navbar-toggler-icon"></span>
@@ -64,8 +61,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <div class="jumbotron white-bg">
-                            <h1>Scan de produit</h1>
+                        <div class="jumbotron light-bg">
+                            <h2>Scan de produit</h2>
                             <hr class="mb-5"/>
                             <form method="post" action="traitement.php" class="purple-bg">
                                 <fieldset class="no_border shadow">
@@ -86,53 +83,77 @@
         
         <div class="container">
             <div class="row">
-                <div class="col-12 subtitle" id="produit">
-                    <h2>Informations Produit</h2>
-                    <hr class="mb-5"/>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-lg-6">
-                    <div class="card product-card">
-                        <img class="card-img-top" src="./img/starbucks.jpeg">
-                    <div class="card-body">
-                        <h5 class="card-title">Starbucks Cappuccino</h5>
-                        <a href="#" class="btn purple-bg text-white">Voir Détails</a>
-                    </div>
-                    </div>
-                    
-                </div>
-                <div class="col-12 col-lg-6">
-                    <div class="card product-card">
-                        <h3 class="card-title text-white">Starbucks Capuccino</h3>
-                    <h4 class="text-light">Starbucks</h4>
-                    <div class="card-body">
-                        Code-barres : 5711953007828
-                        
-                            
-                        <p style="background-color: red; height: 0.5em; width: 0.5em; border-radius: 50%;"></p>9/100
-                        <p><img src="./img/nutriscore.png" class="icone" style="width: 2em;"> Nutriscore</p>
-                        
-                        
-                    </div>
-                    
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid grey-bg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 subtitle" id="santé">
-                        <h2>Santé</h2>
+                <section class="col-12" id="produit">
+                    <div class="subtitle">
+                        <h2>Informations Produit</h2>
                         <hr class="mb-5"/>
                     </div>
+                    <div class="flex-row">
+                            <img id="product-img" src="./img/aubergine.jpeg" class="col-12 col-lg-6">
+                            
+                        
+                        <div class="col-12 col-lg-6">
+                            <div class="card product-card">
+                                <div class="card-title">
+                                    <h3 class="text-white">Starbucks Capuccino</h3>
+                                    <h4 class="text-light">Starbucks</h4>
+                                </div>
+                                    Code-barres : 5711953007828 <br>
+                                    
+                                        
+                                    <!--<p style="background-color: red; height: 0.5em; width: 0.5em; border-radius: 50%;"></p>-->
+                                    <svg height="100" width="100">
+                                        <circle cx="50" cy="50" r="20" stroke="black" stroke-width="3" fill="red" />
+                                      </svg>9/100
+                                    <p><img src="./img/nutriscore.png" class="icone" style="width: 2em;"> Nutriscore</p>
+                                    
+                                    <a href="#" class="btn purple-bg text-white">Voir Détails</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                </section>
+            </div>
+            
+        </div>
+        <!-- Santé -->
+        <div class="container-fluid grey-bg">
+            <div class="container jumbotron">
+                <div class="row">
+                    <div class="col">
+                        <div class="subtitle">
+                            <h2>Santé</h2>
+                            <hr class="mb-5"/>
+                        </div>
+                        <div class="nutri-section">
+                            <div class="card nutri-card">
+                                <div class="card-title"><h5>8.5g</h5> Sucre</div>
+                                <img src = "./img/sugar.svg" alt="sugar SVG"/>
+                            </div>
+                            <div class="card nutri-card">
+                                <div class="card-title"><h5>69Kcal</h5> Calories</div>
+                                <img src = "./img/calories.svg" alt="sugar SVG"/>
+                            </div>
+                            <div class="card nutri-card">
+                                <div class="card-title"><h5>0.08g</h5> Sel</div>
+                                <img src = "./img/salt.svg" alt="sugar SVG"/>
+                            </div>
+                            <div class="card nutri-card">
+                                <div class="card-title"><h5>2.7g</h5> Protéines</div>
+                                <img src = "./img/protein.svg" alt="sugar SVG"/>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
                 <div class="row">
-                    <div class="col-12 col-lg-6 light-grey-bg">
-                        <div class="card">
-                            <h3>Valeurs Nutritives</h3>
+                    <h3>Valeurs Nutritives</h3>
+                </div>
+                <div class="row flex-row">
+                    <div class="col-12 col-lg-6">
                         <table class="table">
                             <thead class="thead-dark">
                                 <tr>
@@ -174,60 +195,66 @@
                                 </tr>
                             </tbody>
                         </table>
-                        </div>
-                        
                     </div>
-                    <div class="col-12 col-lg-6 shadow light-grey-bg">
-                        <div class="card">
-                            <h3>Ingrédients</h3>
-                        <p>
-                            Lait (contient 3,0% de matières grasses) 75%, café arabica Starbucks® (eau, extrait de café) 19.8%, sucre, cacao maigre en poudre 0.1%, correcteur d'acidité (carbonates de potassium), stabilisants (carraghénanes, gomme guar), émulsifiants (mono - et diglycérides d'acides gras d'origine végétale), arôme naturel, arôme.
                             
-                        </p>
-                        <a href="#" class="btn purple-bg text-white">Voir Détails</a>
+                    
+                    <div class="col-12 col-lg-6">
+                        <h3>Ingrédients</h3>
+                        <div class="card">
+                            
+                            <div class="card-body">
+                            Lait (contient 3,0% de matières grasses) 75%,<br> café arabica Starbucks® (eau, extrait de café) 19.8%,<br> sucre,<br> cacao maigre en poudre 0.1%,<br> correcteur d'acidité (carbonates de potassium),<br> stabilisants (carraghénanes, gomme guar),<br> émulsifiants (mono - et diglycérides d'acides gras d'origine végétale),<br> arôme naturel,<br> arôme.
+                                
+                            </div>
                         </div>
                         
                     </div>
                 </div>
+                        
             </div>
         </div>
-        
-        <div class="container">
+    
+        <!-- Environnement -->
+        <div class="container jumbotron">
             <div class="row">
                 <div class="col-12" id="environnement">
                     <h2>Environnement</h2>
                     <hr class="mb-5"/>
                 </div>
             </div>
-            <div class="row">
+            <div class="row flex-row">
                 <div class="col-12 col-lg-4">
                     <div class="card env-card">
-                        <img src="./img/icone/care.png">
-                        <div class="card-body text-center">
+                        <div class="card-title">
+                            <i class="fas fa-globe-europe"></i>
                             <h5>Production :</h5>
-                            Faible impact
+                            
                         </div>
+                        Faible impact
                             
                     </div>
                     
                 </div>
                 <div class="col-12 col-lg-4">
                     <div class="card env-card">
-                        <img src="./img/icone/palm-oil-free.png">
-                        <div class="card-body text-center">
+                        <div class="card-title">
+                            <i class="fas fa-leaf"></i>
                             <h5>Huile de palme :</h5>
-                            Sauvegarde la forêt tropicale
+                            
                         </div>
+                        Sauvegarde la forêt tropicale
                     </div>
                     
                 </div>
                 <div class="col-12 col-lg-4">
                     <div class="card env-card">
-                        <div><img src="./img/icone/fair-trade.png"></div>
-                        <div class="card-body text-center">
+                        <div class="card-title">
+                            <i class="fas fa-hand-holding-heart"></i>
                             <h5>Fairtrade :</h5>
-                            Limite l'utilisation de pesticides
+                            
                         </div>
+                        Limite l'utilisation de pesticides
+                        
                     </div>
                     
                 </div>
@@ -251,7 +278,9 @@
                 </div>
             </div>
         </div>
-
+        
+        
+        <!-- Footer -->
         <div class="container-fluid bg-dark">
             <div class="row">
                 <div class="col">
@@ -267,13 +296,14 @@
         </div>
 
 
-               <!-- jQuery library -->
-               <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-               <!-- Popper JS -->
-               <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-       
-               <!-- Latest compiled JavaScript -->
-               <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     </body>
 </html>

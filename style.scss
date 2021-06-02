@@ -1,15 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&family=Roboto&display=swap');
 
 $background : #C4C4C4;
 $mint: #15DEA5;
 $white: #FFFFFF;
 $grey: #4F5256;
 $brown: #A07655;
-$purple: #7952B3;
+//$purple: #7952B3;
+$red: #CB0301;
+$color2: #5D865C;
+$color3: #E5C28D;
+$color4: #F3C708;
+$color5: #E05534;
+$color6: #B4B671;
+$purple: #6C5381;
 
 $shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 $bottom_shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 $radius: 5px;
+
+.grey-font {
+    color: $grey;
+}
+
+.white-font {
+    color: $white;
+}
 
 .purple-bg {
     background-color: $purple;
@@ -25,10 +42,8 @@ $radius: 5px;
 }
 .grey-bg {
     background-color: $grey;
-    h2 {
-        color: $white;
-    }
 }
+
 .light-grey-bg {
     background-color: $background;
 }
@@ -40,8 +55,21 @@ $radius: 5px;
     width: 100%;
 }
 
+.jumbotron {
+    border-radius: 0 0 5px 5px;
+    padding-top: 0;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:stretch;
+}
+
 h2,h3 {
     margin: 1em 0 1em 0;
+    font-family: 'Pattaya', sans-serif;
 }
 
 hr {
@@ -51,6 +79,13 @@ hr {
     background-color: $purple;
     border: none;
     margin: 0px;
+}
+
+section {
+    margin: 0 0 2em 0;
+    background-color: $white;
+    border-radius: 0 0 10px 10px;
+    //height: 40em;
 }
 
 .subtitle {
@@ -66,6 +101,7 @@ hr {
 
 .logo {
     border-radius: $radius;
+    margin-right: 0.5em;
 }
 
 form {
@@ -86,28 +122,38 @@ form {
     }
 
 }
+#product-img {
+    height: 30%;
+}
 
 .product-card,.env-card {
+    text-align: center;
+    padding: 0.5em;
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-content: center;
-    padding: 1em 1em 0 1em;
-    background-color: $grey;
+    border-radius: 10px;
+    background-color: $background;
     margin-bottom: 0.5em;
     box-shadow: $shadow;
-    img {
-        width: 15em;
-    }
-    .card-body {
-        background-color: $background;
+    .card-title {
+        border-radius: 10px 10px 50% 0;
+        background-color: $grey;
+        box-shadow: $shadow;
+        color: $white;
+        padding: 0.5em;
     }
 }
 
 .env-card {
-    height: 18em;
+    //height: 18em;
     margin: 0.5em;
+    width: auto;
     img {
-        width: 8em;
+        width: 4em;
+        padding: 0.5em;
     }
     
 }
@@ -119,6 +165,32 @@ form {
     }
 }
 
+.nutri-card {
+    img {
+        height: 2em;
+        width: auto;
+    }
+    .card-title {
+        text-align: center;
+        color: $white;
+        height: 6em;
+        width: 100%;
+        border-radius: 10px 0 50% 0;
+        background-color: $grey;
+        font-size: 0.5em;
+        box-shadow: $shadow;
+    }
+    width: 5em;
+    height: 7em;
+    border-radius: 10px 0 10px 0;
+}
+
+.nutri-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 /* =================== START PAGE ================== */
 .body-start {
     background-image: url(./img/bg3.jpeg);
