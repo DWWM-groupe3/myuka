@@ -1,61 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Myuka</title>
+<?php $title = 'Product Page'; ?>
 
-        
+<?php ob_start(); ?>
 
-        <meta charset="utf-8">
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-         
-        <!-- CSS -->
-        <link rel="stylesheet" href="style.css">
-
-        <!-- Font awesome -->
-        <script src="https://kit.fontawesome.com/eaf337826d.js" crossorigin="anonymous"></script>
-    </head>
     <body data-spy="scroll" data-target=".navbar" data-offset="50">
         <!--HEADER-->
-        <!--
-        <div class="bg-dark">
-            <div class="container">
-                <div class="row">
-        -->
-                    <nav class="navbar navbar-expand-lg purple-bg navbar-dark fixed-top">
-                        <a class="navbar-brand" href="index.html">
-                            
-                            <h1><img src="./img/logo.png" width=auto height="50" alt="logo" class="logo">Myuka</h1>
-                        </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarContent">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <!--Nav Items-->
-                        <div id="navbarContent" class="collapse navbar-collapse">
-                            <ul class="navbar-nav">
-                                <li class="nav-item active">
-                                   <a class="nav-link" href="index.html">Accueil</a>
-                                </li>
-                                <li class="nav-item">
-                                   <a class="nav-link" href="#produit">Produit</a>
-                                </li>
-                                <li class="nav-item">
-                                 <a class="nav-link" href="#santé">Santé</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="#environnement">Environnement</a>
-                              </li>
-                             </ul>
-                         </div>
-                    </nav>
-    <!--
+        <nav class="navbar navbar-expand-lg purple-bg navbar-dark fixed-top">
+            <a class="navbar-brand" href="index.html">
+                
+                <h1><img src="./img/logo.png" width=auto height="50" alt="logo" class="logo">Myuka</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--Nav Items-->
+            <div id="navbarContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#produit">Produit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#santé">Santé</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#environnement">Environnement</a>
+                    </li>
+                    </ul>
                 </div>
-            </div>
-        </div>
-        -->
+        </nav>
+
+        <!-- Content -->            
         <!--SCAN DE PRODUIT-->
         <div class="container-fluid grey-bg">
             <div class="container">
@@ -64,58 +40,102 @@
                         <div class="jumbotron light-bg">
                             <h2>Scan de produit</h2>
                             <hr class="mb-5"/>
-                            <form method="post" action="traitement.php" class="purple-bg">
+                            <!--
+                            <form method="post" action="" class="purple-bg" id="scan">
                                 <fieldset class="no_border shadow">
                                     <div class="info_form">
                                         <input type="text" name="searchbar" id="searchbar" placeholder="Chercher un produit, une marque, un code-barres :">
+                                        <p id="txtDel"></p>
                                         
-                                        <div><input  class="btn btn-outline-light" type="submit" value="Envoyer" id="validButton"/></div>
+                                        <button class="btn btn-outline-light" id="validButton" type="button">Scanner</button>
                                     </div>
                 
                                     
                                 </fieldset>
                             </form>
+                            -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         
-        <div class="container">
-            <div class="row">
-                <section class="col-12" id="produit">
+        <div class="container-fluid">
+            <div class="container jumbotron">
+                <div class="col" id="produit">
                     <div class="subtitle">
                         <h2>Informations Produit</h2>
                         <hr class="mb-5"/>
                     </div>
-                    <div class="flex-row">
-                            <img id="product-img" src="./img/aubergine.jpeg" class="col-12 col-lg-6">
-                            
-                        
-                        <div class="col-12 col-lg-6">
-                            <div class="card product-card">
-                                <div class="card-title">
-                                    <h3 class="text-white">Starbucks Capuccino</h3>
-                                    <h4 class="text-light">Starbucks</h4>
-                                </div>
-                                    Code-barres : 5711953007828 <br>
+
+
+                            <script>
+
+                                <?php
+                                if ( isset( $_POST['scanner'] ) ) {
+                                    $product_id = $_POST['searchbar'];
+                                    echo "var product_id = '$product_id';";
+                                ?>
+                                getProduct(product_id);
+
+                                <?php
+                                };
+                                ?>
+
+
+
+                            function getProduct(product_id) {
+                                var settings = {
+                                "async": true,
+                                "crossDomain": true,
+                                "url": "https://world.openfoodfacts.org/api/v0/product/"+product_id+".json",
+                                "method": "GET"
+                                }
+
+                                $.ajax(settings).done(function (response) {
+                                    console.log(response);
+                                    if(response.status == 1){
+                                        //var content = response.wind.speed;
+                                        var productName = response.product.product_name_en
+                                        var productCode = response.product.code
+                                        $("#productName").append(productName);
+                                        $("#productCode").append(productCode);
+                                    } else {
+                                        alert("Le produit n'existe pas. Veuillez rééssayer.")
+                                    }
+
+
+                                });
+                            };
+                            </script>
+                                <div class="card product-card">
+                                    <img id="product-img" src="./img/starbucks.jpeg">
+                                    <div class="card-img-overlay blur-box">
+                                        <div class="card-title">
+                                            <h3 class="text-white" id="productName"></h3>
+                                            <h4 class="text-light">© Starbucks</h4>
+                                            
+                                        </div>
+                                        <div class="card-body">
+                                            
+                                            <div id="productCode">Code-barres : </div>  <br>
+                                            
+                                                
+                                            <!--<p style="background-color: red; height: 0.5em; width: 0.5em; border-radius: 50%;"></p>-->
+                                            9/100<svg height="100" width="100">
+                                                <circle cx="50" cy="50" r="20" stroke="black" stroke-width="3" fill="red" />
+                                            </svg>
+                                            <p>Nutriscore <img src="./img/nutriscore.png" class="icone" style="width: 2em;"></p>
+                                            
+                                            <button class="btn purple-bg text-white"><a href="#santé">Voir Détails</a></button>
+                                        </div>
+
+                                    </div>
+
                                     
-                                        
-                                    <!--<p style="background-color: red; height: 0.5em; width: 0.5em; border-radius: 50%;"></p>-->
-                                    <svg height="100" width="100">
-                                        <circle cx="50" cy="50" r="20" stroke="black" stroke-width="3" fill="red" />
-                                      </svg>9/100
-                                    <p><img src="./img/nutriscore.png" class="icone" style="width: 2em;"> Nutriscore</p>
-                                    
-                                    <a href="#" class="btn purple-bg text-white">Voir Détails</a>
-                                
-                            </div>
-                        </div>
-                    </div>
+                                </div>;
+                </div>
                     
-                    
-                    
-                </section>
             </div>
             
         </div>
@@ -125,7 +145,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="subtitle">
-                            <h2>Santé</h2>
+                            <h2 id="santé">Santé</h2>
                             <hr class="mb-5"/>
                         </div>
                         <div class="nutri-section">
@@ -146,14 +166,20 @@
                                 <img src = "./img/protein.svg" alt="sugar SVG"/>
                             </div>
                         </div>
+                        <div>
+                            <br>
+                            <button id="nutrition-btn" class="btn purple-bg text-white">Valeurs Nutritives</button>
+                            <button id="ingredient-btn" class="btn purple-bg text-white">Ingrédients</button>
+                        </div>
+
                     </div>
                     
                 </div>
-                <div class="row">
-                    <h3>Valeurs Nutritives</h3>
-                </div>
+                
+
                 <div class="row flex-row">
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-lg-6" id="nutrition-page" style="display: none">
+                        <h3>Valeurs Nutritives</h3>
                         <table class="table">
                             <thead class="thead-dark">
                                 <tr>
@@ -196,9 +222,10 @@
                             </tbody>
                         </table>
                     </div>
+                
                             
                     
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-lg-6" id="ingredient-page" style="display: none">
                         <h3>Ingrédients</h3>
                         <div class="card">
                             
@@ -210,7 +237,6 @@
                         
                     </div>
                 </div>
-                        
             </div>
         </div>
     
@@ -261,16 +287,15 @@
             </div>
             <div class="row">
                 <div class="col-12 col-lg-6">
-                    <div class="card env-card small-card">
-                        <img src="./img/icone/location.png">
+                    <div class="card env-card">
+                        
                         <h5>Origine :</h5>
                         non communiquée
                     </div>
                     
                 </div>
                 <div class="col-12 col-lg-6">
-                    <div class="card env-card small-card">
-                        <img src="./img/icone/box.png">
+                    <div class="card env-card">
                         <h5>Emballage :</h5>
                         non communiquée
                     </div>
@@ -279,31 +304,14 @@
             </div>
         </div>
         
-        
-        <!-- Footer -->
-        <div class="container-fluid bg-dark">
-            <div class="row">
-                <div class="col">
-                    <ul class="list-inline text-center">
-                        <li class="list-inline-item"><a href="#">All rights reserved</a></li>
-                        <li class="list-inline-item">&middot;</li>
-                        <li class="list-inline-item"><a href="#">France</a></li>
-                        <li class="list-inline-item">&middot;</li>
-                        <li class="list-inline-item"><a href="#">Plan du site</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
-
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-        <!-- Popper JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     </body>
-</html>
+
+<?php 
+
+$content = ob_get_clean();
+
+require('template.php'); 
+
+?>
